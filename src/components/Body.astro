@@ -1,0 +1,35 @@
+<div class="flex flex-col items-center justify-center mt-[10px] h-2/3">
+    <img src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_light_color_272x92dp.png">
+    <div class="flex mt-[26px] border border-[#626770] w-[584px] h-[48px] rounded-full hover:border-none hover:bg-[#303134] hover:shadow-lg" id="search-div">
+        <img src="/search.svg" class="w-5 ml-[14px]">
+        <input type="text" class="text-white text-[17px] w-full mr-3 ml-3 mb-[2px] bg-transparent focus:outline-none" id="search">
+        <div class="flex-grow"></div>
+        <img src="/microphone.svg" class="w-[24px] mr-[16px] mb-[2px] cursor-pointer">
+        <img src="/camera.svg" class="mr-[16px] mb-[2px] w-[24px] cursor-pointer">
+
+    </div>
+    <div class="flex mt-[29px]">
+        <button class="bg-[#303134] text-[#dceae1] mr-[12px] px-[17.5px] pr-[16px] pl-[16px] py-[6px] pt-[7px] text-[14px] rounded-[4px] border border-[#303134] hover:border-gray-500">Buscar con Google</button>
+        <button class="bg-[#303134] text-[#dceae1] px-[16px] py-[6px] pt-[7px] text-[14px] rounded-[4px] border border-[#303134] hover:border-gray-500">Voy a tener suerte</button>
+        
+    </div>
+</div>
+
+<style>
+    body{
+        font-family: arial,sans-serif;
+    }
+</style>
+
+<script>
+    const searchInput = document.querySelector('#search');
+    const searchDiv = document.querySelector('#search-div');
+
+    searchInput?.addEventListener('focus', function(){
+        searchDiv?.classList.add('border-none','bg-[#303134]', 'shadow-lg')
+    })
+
+    searchInput?.addEventListener('blur', function(){
+        searchDiv?.classList.remove('border-none', 'bg-[#303134]', 'shadow-lg')
+    })
+</script>
